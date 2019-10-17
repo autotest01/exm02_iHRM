@@ -40,10 +40,4 @@ def my_log_config():
     logger.addHandler(to1)
     logger.addHandler(to2)
 
-
-
-# 封装 URL 的前缀
-BASE_URL = "http://182.92.81.159/api/sys/"
-# 动态获取
-PRO_PATH = os.path.dirname(os.path.abspath(__file__))
 TOKEN = None

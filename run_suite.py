@@ -4,6 +4,9 @@
 # 导包
 import unittest
 # 组织测试套件
+from BeautifulReport import BeautifulReport
+
+import app
 from case.TestIHRMUser import TestUser
 from case.testIHRMEmploye import TestEmployee
 
@@ -15,9 +18,7 @@ suite.addTest(TestEmployee("test_emp_get"))
 suite.addTest(TestEmployee("test_emp_delete"))
 
 # 执行测试套件
-runner = unittest.TextTestRunner()
-runner.run(suite)
-
-
-
-# 执行套件对象
+# runner = unittest.THMLTestRunner()
+# runner.run(suite)
+BeautifulReport(suite).report(filename="report.html", description="IHRM",
+                              log_path=app.PRO_PATH + "/report")
